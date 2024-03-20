@@ -1,11 +1,10 @@
 import { Injectable } from '@nestjs/common';
 import { CreateUserProfileDto } from './dto/create-user-profile.dto';
 import { UpdateUserProfileDto } from './dto/update-user-profile.dto';
-import { UserProfile } from './entities/user-profile.entity';
 import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose';
-import { User } from 'src/users/entities/user.entity';
 import { UsersService } from 'src/users/users.service';
+import { UserProfile } from './entities/user-profile.entity';
 
 @Injectable()
 export class UserProfileService {

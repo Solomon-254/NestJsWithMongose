@@ -2,7 +2,7 @@ import { Injectable } from '@nestjs/common';
 import { CreateUserDto } from './dto/create-user.dto';
 import { UpdateUserDto } from './dto/update-user.dto';
 import { InjectModel } from '@nestjs/mongoose';
-import mongoose, { Model } from 'mongoose';
+import { Model } from 'mongoose';
 import { User } from './entities/user.entity';
 
 @Injectable()
@@ -37,6 +37,7 @@ async findOne(id: string) {
 
  async remove(id: string) {
    const deletedUser = await this.userModel.findByIdAndDelete(id, { new: true });
+
     return deletedUser;
   }
 }

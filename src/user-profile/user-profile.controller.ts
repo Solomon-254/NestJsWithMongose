@@ -76,7 +76,8 @@ export class UserProfileController {
       } else {
         throw new NotFoundException(`This ID- ${id} is not valid`);
       }
-    } catch (error) {
+    } 
+    catch (error) {
       return { success: false, message: error.message};
     }
   }
